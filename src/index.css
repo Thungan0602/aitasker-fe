@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply bg-ink text-white antialiased;
+    @apply bg-slate-200 antialiased;
     font-family: 'DM Sans', sans-serif;
   }
 }
