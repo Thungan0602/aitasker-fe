@@ -1,24 +1,30 @@
 export default function Button({
-  children,
-  variant = "primary",
-  className = "",
+    children,
+    variant = "primary",
+    size = "md",
+    className = "",
+    ...props
 }) {
-  const base =
-    "px-10 py-4 rounded-[24px] font-bold transition-all duration-300 active:scale-95";
+    const variants = {
+        primary: "bg-orange-500 text-white hover:bg-orange-600",
+        outline:
+            "border border-orange-500 bg-white text-orange-500 hover:bg-orange-50",
+        ghost: "bg-white text-slate-700 hover:bg-slate-50",
+    };
 
-  const variants = {
-    primary:
-      "bg-orange-500 hover:bg-orange-600 text-white shadow-lg hover:-translate-y-1",
+    const sizes = {
+        sm: "px-4 py-2 text-xs",
+        md: "px-6 py-3 text-xs",
+        lg: "px-10 py-3 text-xs",
+        icon: "h-11 w-11 text-xl",
+    };
 
-    secondary:
-      "border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white",
-      third:
-      "border-2 bg-pink border-black-500 text-black hover:bg-pink-500 hover:text-white",
-  };
-
-  return (
-    <button className={`${base} ${variants[variant]} ${className}`}>
-      {children}
-    </button>
-  );
+    return (
+        <button
+            className={`rounded-full font-black transition ${variants[variant]} ${sizes[size]} ${className}`}
+            {...props}
+        >
+            {children}
+        </button>
+    );
 }
