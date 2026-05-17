@@ -5,6 +5,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
 import { HiSparkles } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 
 export default function LoginPage() {
     const [showPassword, setShowPassword] = useState(false);
@@ -45,12 +46,12 @@ export default function LoginPage() {
                                         Password
                                     </label>
 
-                                    <button
-                                        type="button"
-                                        className="text-[11px] font-bold text-orange-500"
+                                    <Link
+                                        to="/forgot-password"
+                                        className="text-xs font-black text-orange-500"
                                     >
-                                        Forgot password?
-                                    </button>
+                                        Forgot Password?
+                                    </Link>
                                 </div>
 
                                 <div className="relative">
@@ -131,9 +132,12 @@ export default function LoginPage() {
 
                         <p className="mt-7 text-center text-xs text-slate-400">
                             New to the marketplace?{" "}
-                            <button className="font-black text-orange-500">
-                                Create an account
-                            </button>
+                            <Link
+                                to="/register"
+                                className="font-bold text-orange-500"
+                            >
+                                Sign Up
+                            </Link>
                         </p>
                     </div>
                 </section>

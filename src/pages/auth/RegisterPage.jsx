@@ -5,6 +5,7 @@ import { FaFacebook, FaUserTie } from "react-icons/fa";
 import { RiRobot2Line } from "react-icons/ri";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function RegisterPage() {
     const [showPassword, setShowPassword] = useState(false);
@@ -149,7 +150,12 @@ export default function RegisterPage() {
 
                         <p className="mt-7 text-center text-xs text-slate-500">
                             Already have an account?{" "}
-                            <button className="font-black text-orange-500">Sign in</button>
+                            <Link
+                                to="/login"
+                                className="font-bold text-orange-500 hover:underline"
+                            >
+                                Sign in
+                            </Link>
                         </p>
                     </div>
                 </section>

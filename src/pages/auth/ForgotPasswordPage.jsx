@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../assets/images/logo01.png";
 import Button from "../../components/ui/Button";
+import { Link } from "react-router-dom";
 
 export default function ForgotPasswordPage() {
     return (
@@ -39,9 +40,9 @@ export default function ForgotPasswordPage() {
                         </form>
 
                         <div className="mt-8 text-center">
-                            <button className="text-sm font-bold text-orange-500">
-                                ← Back to Login
-                            </button>
+                            <Link to="/login" className="text-sm font-semibold text-slate-400">
+                                Back to Login
+                            </Link>
                         </div>
                     </div>
                 </section>

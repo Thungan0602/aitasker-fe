@@ -22,61 +22,9 @@ export default function JobDetail() {
   return (
     <div className="min-h-screen bg-[#f4f6fb] text-[#111331]">
       <div className="flex min-h-screen w-full">
-        {/* Sidebar */}
-        <aside className="sticky top-0 flex h-screen w-[230px] flex-col bg-white px-5 py-6">
-          <div className="mb-10">
-            <img src={logo} alt="AITasker" className="h-12 w-12 rounded-xl object-cover" />
-          </div>
-
-          <nav className="space-y-3 text-sm font-bold text-slate-500">
-            <SidebarItem active icon={<FiBriefcase />} text="Marketplace" />
-            <SidebarItem icon={<FiGrid />} text="Manage Jobs" />
-            <SidebarItem active icon={<FiMessageSquare />} text="Messages" />
-          </nav>
-
-          <div className="mt-auto">
-            <button className="w-full rounded-full bg-[#080c24] py-3 text-xs font-black text-white">
-              Create New Job
-            </button>
-
-            <div className="mt-8 space-y-4 border-t border-slate-100 pt-5 text-xs font-semibold text-slate-500">
-              <SidebarMini icon={<FiHelpCircle />} text="Help Center" />
-              <SidebarMini icon={<FiLogOut />} text="Log out" />
-            </div>
-          </div>
-        </aside>
-
         {/* Main */}
         <main className="flex-1">
-          {/* Header */}
-          <header className="flex h-[74px] items-center justify-between border-b border-slate-200 bg-white px-8">
-            <div className="flex items-center gap-8 text-sm font-bold">
-              <div className="flex items-center gap-2">
-                <img src={logo} alt="AITasker" className="h-7 w-7 rounded object-cover" />
-                <span>AITasker</span>
-              </div>
-
-              <nav className="flex items-center gap-6 text-slate-500">
-                <span className="border-b-2 border-orange-500 pb-6 text-orange-500">
-                  Marketplace
-                </span>
-                <span>My Dashboard</span>
-                <span>Messages</span>
-              </nav>
-            </div>
-
-            <div className="flex items-center gap-5">
-              <Button className="rounded-full px-7 py-2 text-xs">Post a Job</Button>
-              <FiBell className="text-slate-500" />
-              <FiSettings className="text-slate-500" />
-              <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100"
-                alt=""
-                className="h-9 w-9 rounded-full object-cover ring-2 ring-orange-500"
-              />
-            </div>
-          </header>
-
+          
           <section className="mx-auto grid max-w-[1180px] grid-cols-[1fr_280px] gap-8 px-8 py-10">
             {/* Left content */}
             <div>

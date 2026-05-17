@@ -6,6 +6,7 @@ import Button from "../../components/ui/Button";
 
 const services = [
     {
+        id: 1,
         title: "Enterprise LLM Fine-tuning",
         author: "Dr. Aris Thorn",
         price: "$2,450",
@@ -15,6 +16,7 @@ const services = [
         tags: ["NLP", "ENTERPRISE"],
     },
     {
+        id: 2,
         title: "Custom Object Detection API",
         author: "Sarah Chen",
         price: "$1,800",
@@ -24,6 +26,7 @@ const services = [
         tags: ["VISION", "REAL-TIME"],
     },
     {
+        id: 3,
         title: "ETL Pipeline Automation",
         author: "Marcus Vane",
         price: "$1,200",
@@ -33,6 +36,7 @@ const services = [
         tags: ["DATA", "PIPELINE"],
     },
     {
+        id: 4,
         title: "Generative Asset Pipeline",
         author: "Elena Rossi",
         price: "$3,100",
@@ -45,7 +49,7 @@ const services = [
 
 export default function Marketplace() {
     return (
-        <MarketplaceLayout>
+        <div>
             <section className="px-14 py-10 max-w-[1500px] mx-auto">
                 <div className="mb-8 flex items-end justify-between">
                     <div>
@@ -103,6 +107,6 @@ export default function Marketplace() {
                     </div>
                 </div>
             </section>
-        </MarketplaceLayout>
+        </div>
     );
 }
