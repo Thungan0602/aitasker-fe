@@ -76,7 +76,7 @@ export default function Header({ children }) {
 
               {/* Lựa chọn 1: Xem Profile */}
               <button 
-                onClick={() => { navigate("/profile"); setIsOpen(false); }}
+                onClick={() => { navigate("/expert-profile"); setIsOpen(false); }}
                 className="w-full flex items-center gap-3 px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-[#15153d] transition-all text-left"
               >
                 <User size={18} className="text-gray-400" />
