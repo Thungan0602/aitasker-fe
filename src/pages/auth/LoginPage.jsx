@@ -6,9 +6,10 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
 import { HiSparkles } from "react-icons/hi2";
 import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 export default function LoginPage() {
     const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
     return (
         <div className="h-screen w-screen overflow-hidden bg-white">
             <div className="grid h-full w-full grid-cols-1 bg-white lg:grid-cols-[60%_40%]">
@@ -105,7 +106,7 @@ export default function LoginPage() {
                                 Keep me logged in for 30 days
                             </label>
 
-                            <Button className="w-full rounded-md">
+                            <Button className="w-full rounded-md" onClick={() => navigate("/")}>
                                 Sign In <span className="ml-1">↪</span>
                             </Button>
                         </form>

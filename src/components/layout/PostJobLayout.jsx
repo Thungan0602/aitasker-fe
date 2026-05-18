@@ -5,6 +5,7 @@ import {
   ClipboardList,
   MessageSquare,
   BriefcaseBusiness,
+  BadgeRussianRubleIcon,
 
 } from "lucide-react";
 import { Outlet, NavLink } from "react-router-dom";
@@ -34,6 +35,11 @@ export default function PostJobLayout() {
       icon: <BriefcaseBusiness size={20} />,
       path: "/post-job/step-1",
       subPaths: ["/post-job"],
+    },
+        {
+      name: "Manage Proposals",
+      icon: <BadgeRussianRubleIcon size={20} />,
+      path: "/manage-proposals",
     },
     {
       name: "Messages",
