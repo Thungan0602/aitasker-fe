@@ -3,49 +3,8 @@ import MarketplaceLayout from "../../components/layout/MarketplaceLayout";
 import ServiceCard from "../../components/common/ServiceCard";
 import FeaturedServiceCard from "../../components/common/FeaturedServiceCard";
 import Button from "../../components/ui/Button";
+import { servicesJobDetails } from "../../data/servicesJobDetails";
 
-const services = [
-    {
-        id: 1,
-        title: "Enterprise LLM Fine-tuning",
-        author: "Dr. Aris Thorn",
-        price: "$2,450",
-        rating: "4.9",
-        image:
-            "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=800",
-        tags: ["NLP", "ENTERPRISE"],
-    },
-    {
-        id: 2,
-        title: "Custom Object Detection API",
-        author: "Sarah Chen",
-        price: "$1,800",
-        rating: "5.0",
-        image:
-            "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800",
-        tags: ["VISION", "REAL-TIME"],
-    },
-    {
-        id: 3,
-        title: "ETL Pipeline Automation",
-        author: "Marcus Vane",
-        price: "$1,200",
-        rating: "4.8",
-        image:
-            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800",
-        tags: ["DATA", "PIPELINE"],
-    },
-    {
-        id: 4,
-        title: "Generative Asset Pipeline",
-        author: "Elena Rossi",
-        price: "$3,100",
-        rating: "4.7",
-        image:
-            "https://images.unsplash.com/photo-1620121692029-d088224ddc74?q=80&w=800",
-        tags: ["CREATIVE", "GAN"],
-    },
-];
 
 export default function Marketplace() {
     return (
@@ -74,15 +33,15 @@ export default function Marketplace() {
                 </div>
 
                 <div className="grid grid-cols-4 gap-8">
-                    <ServiceCard service={services[0]} />
-                    <ServiceCard service={services[1]} />
-                    <ServiceCard service={services[2]} />
-                    <ServiceCard service={services[3]} />
+                    <ServiceCard service={servicesJobDetails[0]} />
+                    <ServiceCard service={servicesJobDetails[1]} />
+                    <ServiceCard service={servicesJobDetails[2]} />
+                    <ServiceCard service={servicesJobDetails[3]} />
 
                     <FeaturedServiceCard />
 
-                    <ServiceCard service={services[0]} />
-                    <ServiceCard service={services[1]} />
+                    <ServiceCard service={servicesJobDetails[0]} />
+                    <ServiceCard service={servicesJobDetails[1]} />
                 </div>
 
                 <div className="mt-12 flex flex-col items-center">
