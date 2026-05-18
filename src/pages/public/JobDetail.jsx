@@ -1,8 +1,8 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 import Button from "../../components/ui/Button";
 import Badge from "../../components/ui/Badge";
 import { servicesJobDetails } from "../../data/servicesJobDetails";
+import { Link, useParams } from "react-router-dom";
 import {
   FiCode,
   FiCpu,
@@ -24,9 +24,20 @@ export default function JobDetail() {
     <div className="min-h-screen bg-[#f4f6fb] text-[#111331]">
       <section className="mx-auto grid max-w-[1180px] grid-cols-[1fr_280px] gap-8 px-8 py-10">
         <div>
-          <p className="mb-5 text-xs text-slate-500">
-            Marketplace / <span className="font-black text-[#111331]">Job Details</span>
-          </p>
+          <div className="mb-5 flex items-center gap-2 text-sm">
+            <Link
+              to="/marketplace"
+              className="font-medium text-slate-500 transition hover:text-orange-500"
+            >
+              Marketplace
+            </Link>
+
+            <span className="text-slate-400">/</span>
+
+            <span className="font-black text-[#111331]">
+              Job Details
+            </span>
+          </div>
 
           <h1 className="max-w-[680px] text-5xl font-black leading-tight tracking-tight">
             {job.title}
