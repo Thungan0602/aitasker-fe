@@ -27,7 +27,8 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<PublicLayout />}>
-          <Route path="/marketplace" element={<Marketplace />} />
+          <Route index element={<Marketplace />} />
+          <Route path="marketplace" element={<Marketplace />} />
           <Route path="/jobs/:id" element={<JobDetail />} />
         </Route>
 
