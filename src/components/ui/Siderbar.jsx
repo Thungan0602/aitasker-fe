@@ -1,6 +1,7 @@
 import { CircleHelp, LogOut } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom"; // 1. Import thêm useLocation
 import logo from "../../assets/images/logo01.png";
+import { Link } from "react-router-dom";
 
 const THEME_STYLES = {
   orange: {
@@ -29,7 +30,7 @@ export default function Sidebar({
       <div>
         {/* LOGO */}
         <div className="px-6 py-8 flex items-center gap-3">
-            <img src={logo} alt="Logo" className="h-12 w-auto rounded-full" />
+          <img src={logo} alt="Logo" className="h-12 w-auto rounded-full" />
           <div>
             <h1 className="font-bold text-[20px] text-[#1a1a3c]">
               {portalName}
@@ -56,11 +57,10 @@ export default function Sidebar({
               <NavLink
                 key={item.name}
                 to={item.path}
-                className={`flex items-center gap-3 px-4 py-4 rounded-2xl font-medium transition-all ${
-                  isItemActive
+                className={`flex items-center gap-3 px-4 py-4 rounded-2xl font-medium transition-all ${isItemActive
                     ? activeTheme.activeLink
                     : `text-[#2f2f4f] ${activeTheme.hoverLink}`
-                }`}
+                  }`}
               >
                 {item.icon}
                 {item.name}
@@ -77,9 +77,13 @@ export default function Sidebar({
         >
           <CircleHelp size={20} /> Support
         </button>
-        <button className="w-full flex items-center gap-3 px-4 py-4 rounded-2xl text-[#2f2f4f] hover:bg-red-50 hover:text-red-500 transition-all">
-          <LogOut size={20} /> Sign Out
-        </button>
+
+        
+          <Link to="/login" className={`w-full flex items-center gap-3 px-4 py-4 rounded-2xl text-[#2f2f4f] transition-all ${activeTheme.hoverLink}`}>
+            <LogOut size={20} /> Sign Out
+          </Link>
+        
+
       </div>
     </aside>
   );

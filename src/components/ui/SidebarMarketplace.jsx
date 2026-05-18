@@ -62,10 +62,9 @@ export default function SidebarMarketplace({
               key={item.name}
               to={item.path}
               className={({ isActive }) =>
-                `flex items-center gap-3 px-4 py-4 rounded-2xl font-medium transition-all ${
-                  isActive
-                    ? activeTheme.activeLink
-                    : `text-[#2f2f4f] ${activeTheme.hoverLink}`
+                `flex items-center gap-3 px-4 py-4 rounded-2xl font-medium transition-all ${isActive
+                  ? activeTheme.activeLink
+                  : `text-[#2f2f4f] ${activeTheme.hoverLink}`
                 }`
               }
             >
@@ -149,9 +148,11 @@ export default function SidebarMarketplace({
 
       {/* BOTTOM */}
       <div className="px-4 pb-6 space-y-2">
-        <Link to="/login" className="flex items-center gap-3 bg-white">
-          Sign out
+
+        <Link to="/login" className={`w-full flex items-center gap-3 px-4 py-4 rounded-2xl text-[#2f2f4f] transition-all ${activeTheme.hoverLink}`}>
+          <LogOut size={20} /> Sign Out
         </Link>
+
       </div>
     </aside>
   );
