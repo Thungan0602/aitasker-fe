@@ -22,21 +22,22 @@ import LoginPage from "./pages/auth/LoginPage";
 import RegisterPage from "./pages/auth/RegisterPage";
 import ForgotPasswordPage from "./pages/auth/ForgotPasswordPage";
 import JobDetail from "./pages/public/JobDetail";
+import Authentication from "./components/layout/Authentication";
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<PublicLayout />}>
-          <Route index element={<Marketplace />} />
-          <Route path="marketplace" element={<Marketplace />} />
+        <Route path="/" element={<Authentication />}>
+          <Route index element={<LoginPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+        </Route>
+        
+        <Route element={<PublicLayout />}>
+          <Route path="/marketplace" element={<Marketplace />} />
           <Route path="/jobs/:id" element={<JobDetail />} />
         </Route>
-
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-
-        <Route element={<PostJobLayout />} />
 
         <Route element={<PostJobLayout />}>
           <Route path="/post-job/step-1" element={<PostJob />} />
